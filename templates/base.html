@@ -11,24 +11,24 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/hostmind/host@latest/static/index.css">
-    <title>{% block title %}{% endblock title %} - ashish</title>
+    <title>{% block title %}{% endblock title %} - Лена Капаца</title>
     {% tailwind_css %}
 </head>
 <body>
     {% comment %} <div class="z-50 fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full"
 	id="my-modal"></div> {% endcomment %}
     <nav class="nav bg-gray-900 text-white flex justify-between items-center p-3 px-8 md:px-20">
-        <a href="/" class="text-lg font-mono">ashish</a>
+        <a href="/" class="text-lg font-mono">Лена Капаца</a>
         <div class='flex space-x-4 text-xl'>
             <i class="searchBtn mt-1 bi bi-search text-sm cursor-pointer md:hidden"></i>
             <i class="nav-btn bi bi-list cursor-pointer md:hidden"></i>
         </div>
         <div class="bg-gray-900 hidden items-center md:block">
-            <a href="/" class="p-2 px-3 my-1 text-white rounded-[8px] hover:bg-gray-800">Home</a>
-            <a href="/about" class="p-2 px-3 my-1 text-white rounded-[8px] hover:bg-gray-800">About</a>
-            <a href="/contact" class="p-2 px-3 my-1 text-white rounded-[8px] hover:bg-gray-800">Contact</a>
-            <a href="/blog" class="p-2 px-3 my-1 text-white rounded-[8px] hover:bg-gray-800">Blog</a>
-            <a href="/projects" class="p-2 px-3 my-1 text-white rounded-[8px] hover:bg-gray-800">Projects</a>
+            <a href="/" class="p-2 px-3 my-1 text-white rounded-[8px] hover:bg-gray-800">Главная</a>
+            <a href="/about" class="p-2 px-3 my-1 text-white rounded-[8px] hover:bg-gray-800">Об авторе</a>
+            <a href="/contact" class="p-2 px-3 my-1 text-white rounded-[8px] hover:bg-gray-800">Контакты</a>
+            <a href="/blog" class="p-2 px-3 my-1 text-white rounded-[8px] hover:bg-gray-800">Статьи</a>
+            <a href="/projects" class="p-2 px-3 my-1 text-white rounded-[8px] hover:bg-gray-800">Книга</a>
             <i class="searchBtn1 p-2 px-3 my-1 text-white rounded-[8px] hover:bg-gray-800 mt-1 bi bi-search text-sm cursor-pointer"></i>
           </div>
     </nav>
@@ -45,26 +45,26 @@
       
     <footer class='bg-gray-900 text-white p-8 pb-2 grid md:grid-cols-3 md:gap-10 lg:gap-20 xl:gap-30 2xl:gap-40 md:px-40'>
         <div class='blog-name'>
-            <p class='text-xl font-bold'>ashish<p>
-            <p class='my-3 text-justify'>Explore my developer portfolio and blog to empower your development skills and create something amazing together.</p>
+            <p class='text-xl font-bold'>Лена Капаца<p>
+            <p class='my-3 text-justify'>Статьи об ML / DL с примерами кода.</p>
         </div>
         <div class='pages'>
-            <p class='text-xl font-bold'>Pages<p>
+            <p class='text-xl font-bold'>Об авторе<p>
             <ul class='my-3'>
-                <li><a href='/'><i class="bi bi-arrow-right-short"></i> Privacy Policy</a></li>
-                <li><a href='/'<i class="bi bi-arrow-right-short"></i> Disclaimer</a></li>
+                <li><a href='/'><i class="bi bi-arrow-right-short"></i> Био</a></li>
+                <li><a href='/'<i class="bi bi-arrow-right-short"></i> Контакты</a></li>
             </ul>
         </div>
         <div class='socials'>
-            <p class='text-xl font-bold'>Follow me<p>
+            <p class='text-xl font-bold'>Соцсети<p>
             <ul class='my-3 flex text-xl'>
-                <li><a href='/' class='hover:text-blue-100'><i class="bi bi-github"></i></a></li>
-                <li class='px-2'><a href='/' class='hover:text-blue-100'><i class="bi bi-linkedin"></i></a></li>
+                <li><a href='https://github.com/fitwist' class='hover:text-blue-100'><i class="bi bi-github"></i></a></li>
+                <li class='px-2'><a href='https://www.linkedin.com/in/helenkapatsa/' class='hover:text-blue-100'><i class="bi bi-linkedin"></i></a></li>
             </ul>
         </div>
     </footer>
     <div class='bg-slate-800 text-white text-justify flex justify-center items-center'>
-        <p class='p-2'>Copyright &copy;<script>document.write(new Date().getFullYear())</script> <span class="text-blue-300 text-justify"><a href="/" target="_blank">ashish</a></span> All Rights Reserved</p>
+        <p class='p-2'>&copy;<script>document.write(new Date().getFullYear())</script> <span class="text-blue-300 text-justify"> Лена Капаца. Все права защищены.</p>
     </div>
 
     <div class="searchModal text-white z-50 fixed bottom-0 inset-x-0 px-4 pb-4 sm:inset-0 sm:flex sm:items-center sm:justify-center">
