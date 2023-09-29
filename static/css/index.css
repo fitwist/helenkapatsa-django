@@ -4,17 +4,17 @@
 }
 
 @font-face{
-    font-family: 'Poppins-Bold';
-    src: url("../fonts//Poppins-Bold.ttf") format('truetype');
+    font-family: 'Mulish-Bold';
+    src: url("../fonts//Mulish-Bold.ttf") format('truetype');
 } */
 
 @font-face{
-    font-family: 'Darling';
+    font-family: 'Mulish';
     src: url("../fonts//Mulish-Regular.ttf") format('truetype');
 }
 
 @font-face{
-    font-family: 'Poppins-Bold';
+    font-family: 'Mulish-Bold';
     src: url("../fonts//Mulish-Bold.ttf") format('truetype');
 }
 
