@@ -15,3 +15,26 @@ id|html_article||slug|publication_date|category
 6|time|date|1||0
 7|category|varchar(255)|1||0
 8|thumbnail_url|varchar(200)|0||0
+
+
+# Запуск тестовой базы данных в докере
+
+## Запуск базы в докере
+
+```bash
+docker run -d   --name postgres-container   -e POSTGRES_USER=postgres   -e POSTGRES_PASSWORD=blog_app_password   -e POSTGRES_DB=railway   -p 5435:5432   postgres:latest
+```
+
+## Создание дампа продакшн базы
+
+```bash
+pg_dump -U postgres -h pghost -p pgport -d railway -f blog_app_dump.sql
+```
+
+Значения переменных pghost и pgport можно посмотреть в railway в настройках сервиса postgres на странице connect
+
+##  Развертка дампа в тестовой БД
+
+```
+psql -h phhost -p pgport -U postgres -d railway -a -f blog_app_dump.sql
+```
