@@ -35,6 +35,25 @@ pg_dump -U postgres -h pghost -p pgport -d railway -f blog_app_dump.sql
 
 ##  Развертка дампа в тестовой БД
 
-```
+```bash
 psql -h phhost -p pgport -U postgres -d railway -a -f blog_app_dump.sql
+```
+
+
+## Перенос базы с sqlite на psql
+
+1. Установить утилиту pgloader
+ - Debian
+    ```bash
+    sudo apt-get install pgloader
+    ```
+ - Arch
+    ```bash
+    packer -S pgloader
+    ```
+2. Отредактировать в скрипте переноса db_tools/pg_load.script путь к litesql базе данных (требуется полный путь), а также реквезиты доступа к базе данных postgresql
+
+3. Запустить скрипт переноса
+```bash
+pgloader ./db_tools/pg_load.script
 ```

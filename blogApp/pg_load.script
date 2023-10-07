@@ -1,0 +1,7 @@
+load database
+     from sqlite:///full/path/to/repo/folder/db.sqlite3
+     into postgresql://postgres:postgres_user_password@pghost:pgport/railway
+
+ with include drop, create tables, create indexes, reset sequences
+
+  set work_mem to '16MB', maintenance_work_mem to '512 MB';
