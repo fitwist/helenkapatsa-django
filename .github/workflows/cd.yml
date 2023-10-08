@@ -13,10 +13,10 @@ jobs:
     - name: Deploy using ssh
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.PRIVATE_KEY }}
-        passphrase: ${{ secrets.PASSPHRASE }}
+        host: ${{ ci.secrets.HOST }}
+        username: ${{ ci.secrets.USERNAME }}
+        key: ${{ ci.secrets.PRIVATE_KEY }}
+        passphrase: ${{ ci.secrets.PASSPHRASE }}
         port: 22
         script: |
           cd /root/django-tailwind-blog
