@@ -1,0 +1,27 @@
+name: BlogApp CD
+
+on:
+  # Triggers the workflow on push or commit request events but only for the master branch
+  push:
+    branches: [ main ]
+  commit:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy using ssh
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.PRIVATE_KEY }}
+        passphrase: ${{ secrets.PASSPHRASE }}
+        port: 22
+        script: |
+          cd /root/django-tailwind-blog
+          git pull origin main
+          git status
+          systemctl restart blog_app_server

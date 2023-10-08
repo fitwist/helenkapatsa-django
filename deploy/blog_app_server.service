@@ -1,0 +1,13 @@
+[Unit]
+Description=Machine learning blog. Django server by gunicorn
+User=root
+After=network.target
+Type=simple
+Restart=always
+RestartSec=1
+
+[Service]
+ExecStart=/root/django-tailwind-blog/deploy/run.sh
+
+[Install]
+WantedBy=multi-user.target
