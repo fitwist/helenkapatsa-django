@@ -31,7 +31,7 @@ docker run -d   --name postgres-container   -e POSTGRES_USER=postgres   -e POSTG
 pg_dump -U postgres -h pghost -p pgport -d railway -f blog_app_dump.sql
 ```
 
-Значения переменных pghost и pgport можно посмотреть в railway в настройках сервиса postgres на странице connect
+Значения переменных `pghost` и `pgport` можно посмотреть в railway в настройках сервиса `postgres` на странице `connect`
 
 ##  Развертка дампа в тестовой БД
 
@@ -42,7 +42,7 @@ psql -h phhost -p pgport -U postgres -d railway -a -f blog_app_dump.sql
 
 ## Перенос базы с sqlite на psql
 
-1. Установить утилиту pgloader
+1. Установить утилиту `pgloader`
  - Debian
     ```bash
     sudo apt-get install pgloader
@@ -51,9 +51,20 @@ psql -h phhost -p pgport -U postgres -d railway -a -f blog_app_dump.sql
     ```bash
     packer -S pgloader
     ```
-2. Отредактировать в скрипте переноса db_tools/pg_load.script путь к litesql базе данных (требуется полный путь), а также реквезиты доступа к базе данных postgresql
+2. Отредактировать в скрипте переноса `db_tools/pg_load.script` путь к litesql базе данных (требуется полный путь), а также реквезиты доступа к базе данных postgresql
 
 3. Запустить скрипт переноса
 ```bash
 pgloader ./db_tools/pg_load.script
 ```
+
+
+## Деплой на VDS
+1. Процесс установки на "голой" машине описан в `deploy/install.sh`
+2. Конфигурация деплоя:
+   - сервер на gunicorn, конфиг-файл в `deploy/gunicorn_config.py`
+   - демон (сервис) на systemd, конфигурация в `deploy/blog_app_server.service`, на сервере размещен в `/etc/systemd/system/blog_app_server.service`
+   - конфиг доступа к базе должен лежать в файле `.env`. Пример содержимого можно найти в `.env_sample`
+   - На сервере используется сертификат `letsencrypt`. Сертификат лежит в `/etc/letsencrypt/live/helenkapatsa.ru `(путь по умолчанию). Необходимо помнить, что при настроеном `cloudflare` пользователь видит сертификат `cloudflare`, а не `letsencrypt`
+   - запуск осуществляется посредством скрипта `deploy/run.sh`, который активирует окружение из `.env` файла
+3. CI настроен на основе ssh. Хост и ключи доступа заданы в github environment `ci`, в secrets
