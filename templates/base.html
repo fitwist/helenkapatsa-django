@@ -16,19 +16,6 @@
     <!-- Yandex.RTB -->
     <script>window.yaContextCb=window.yaContextCb||[]</script>
     <script src="https://yandex.ru/ads/system/context.js" async></script>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-      ym(70318642, "init", {
-          clickmap:true,
-          trackLinks:true,
-          accurateTrackBounce:true,
-          webvisor:true
-      });
-    </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2W5064HJ8S"></script>
@@ -46,7 +33,7 @@
     {% tailwind_css %}
 </head>
 <body>
-    {% comment %} <div class="z-50 fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-screen w-full"
+  {% comment %} <div class="z-50 fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-screen w-full"
 	id="my-modal"></div> {% endcomment %}
     <nav class="nav bg-gray-900 text-white flex justify-between items-center p-3 px-8 md:px-20">
         <a href="/" class="text-lg font-mono">Лена Капаца</a>
@@ -63,7 +50,16 @@
             <i class="searchBtn1 p-2 px-3 my-1 text-white rounded-[8px] hover:bg-gray-800 mt-1 bi bi-search text-sm cursor-pointer"></i>
           </div>
     </nav>
-
+    <!-- Yandex.RTB R-A-1618028-1 -->
+    <div id="yandex_rtb_R-A-1618028-1"></div>
+    <script>
+    window.yaContextCb.push(()=>{
+      Ya.Context.AdvManager.render({
+        "blockId": "R-A-1618028-1",
+        "renderTo": "yandex_rtb_R-A-1618028-1"
+      })
+    })
+    </script>
     <div class="mob-nav bg-gray-900 hidden flex-col items-center w-full h-64 md:hidden">
         <a href="/" class="p-2 px-36 my-1 text-white rounded-[8px] hover:bg-gray-800">Главная</a>
         <a href="/about" class="p-2 px-36 my-1 text-white rounded-[8px] hover:bg-gray-800">Об авторе</a>
