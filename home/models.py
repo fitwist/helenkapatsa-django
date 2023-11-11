@@ -8,7 +8,7 @@ class Blog(models.Model):
     content = models.TextField()
     thumbnail_img = models.ImageField(null=True, blank=True, upload_to="images/")
     thumbnail_url = models.URLField(blank=True, null=True)
-    category = models.CharField(max_length=255, default="uncategorized")
+    category = models.CharField(max_length=255, default="Основы")
     slug = models.CharField(max_length=100)
     time = models.DateField(auto_now_add=True)
 
