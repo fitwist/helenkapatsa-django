@@ -1213,7 +1213,7 @@ select {
 }
 
 .from-cyan-300 {
-  --tw-gradient-from: #67e8f9;
+  --tw-gradient-from: #3b82f6;
   --tw-gradient-to: rgb(103 232 249 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
