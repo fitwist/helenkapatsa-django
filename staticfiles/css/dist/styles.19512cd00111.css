@@ -1208,7 +1208,7 @@ select {
 
 .from-cyan-200 {
   --tw-gradient-from: #a5f3fc;
-  --tw-gradient-to: rgb(165 243 252 / 0);
+  --tw-gradient-to: rgb(59 130 246/ 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -1511,7 +1511,7 @@ select {
 
 .text-cyan-200 {
   --tw-text-opacity: 1;
-  color: rgb(165 243 252 / var(--tw-text-opacity));
+  color: rgb(59 130 246/ var(--tw-text-opacity));
 }
 
 .text-blue-300 {
@@ -1718,7 +1718,7 @@ select {
 
 .group:hover .group-hover\:text-cyan-200 {
   --tw-text-opacity: 1;
-  color: rgb(165 243 252 / var(--tw-text-opacity));
+  color: rgb(59 130 246/ var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:text-gray-50 {
