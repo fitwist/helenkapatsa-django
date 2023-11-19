@@ -10,15 +10,15 @@
 
 @font-face{
     font-family: 'Mulish';
-    src: url("../fonts//Mulish-Regular.ttf") format('truetype');
+    src: url("../fonts/Mulish-Regular.ttf") format('truetype');
 }
 
 @font-face{
     font-family: 'Mulish-Bold';
-    src: url("../fonts//Mulish-Bold.ttf") format('truetype');
+    src: url("../fonts/Mulish-Bold.ttf") format('truetype');
 }
 
 @font-face{
     font-family: 'Schabo';
-    src: url("../fonts//schabo.woff") format('truetype');
+    src: url("../fonts/schabo.woff") format('truetype');
 }
