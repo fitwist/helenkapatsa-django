@@ -103,6 +103,7 @@ a.section:focus, a.section:hover {
 
 p, ol, ul, dl {
     margin: .2em 0 .8em 0;
+    margin-bottom: .8em
 }
 
 p {
