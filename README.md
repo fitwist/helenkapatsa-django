@@ -51,3 +51,6 @@ pgloader ./db_tools/pg_load.script
    - На сервере используется сертификат `letsencrypt`. Сертификат лежит в `/etc/letsencrypt/live/helenkapatsa.ru `(путь по умолчанию). Необходимо помнить, что при настроеном `cloudflare` пользователь видит сертификат `cloudflare`, а не `letsencrypt`
    - запуск осуществляется посредством скрипта `deploy/run.sh`, который активирует окружение из `.env` файла
 3. CI настроен на основе ssh. Хост и ключи доступа заданы в github environment `ci`, в secrets
+
+# Обновление SSL-сертификата
+`certbot certonly --standalone --preferred-challenges http -d helenkapatsa.ru`
