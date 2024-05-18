@@ -1,6 +1,6 @@
+- Подключимся к VPS: `ssh root@194.87.235.26`, `31GBSorbB5`
 - Запустим сервер: `python manage.py runserver`
 - Посмотрим названия столбцов: `PRAGMA table_info(home_blog);`
-- Подключимся к VPS: `ssh root@194.87.235.26`, `31GBSorbB5`
 
 ## Запуск базы в докере
 
